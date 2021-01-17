@@ -2,8 +2,8 @@ package com.company.Service;
 
 import com.company.BackEnd.LeagueManager;
 import com.company.BackEnd.SoccerPlayer;
-import com.company.Enums.Country;
-import com.company.Enums.League;
+import com.company.BackEnd.Enums.Country;
+import com.company.BackEnd.Enums.League;
 
 public class Service {
 
