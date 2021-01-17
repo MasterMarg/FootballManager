@@ -1,4 +1,4 @@
-package com.company.Service;
+package com.company.BackEnd;
 
 public class PlayerNameAlreadyTakenException extends Exception {
 
