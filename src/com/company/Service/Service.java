@@ -7,7 +7,7 @@ import com.company.BackEnd.Enums.League;
 
 public class Service {
 
-    public static LeagueManager createLeagueManager(){
+    public static LeagueManager createLeagueManager() {
         LeagueManager leagueManager = new LeagueManager();
         while (leagueManager.getAllPlayers().length < (200 * League.values().length)
                 || isNotEnoughPlayersInLeague(leagueManager)
@@ -35,6 +35,7 @@ public class Service {
             int playerCounter = 0;
             for (SoccerPlayer player : leagueManager.getAllPlayers()) {
                 if (player.getLeague() == league) playerCounter++;
+                if (playerCounter == 200) break;
             }
             if (playerCounter < 200) return true;
         }
@@ -46,6 +47,7 @@ public class Service {
             int playerCounter = 0;
             for (SoccerPlayer player : leagueManager.getAllPlayers()) {
                 if (player.getCountry() == country) playerCounter++;
+                if (playerCounter == 3) break;
             }
             if (playerCounter < 3) return true;
         }
