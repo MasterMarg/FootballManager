@@ -1,4 +1,8 @@
-package com.company;
+package com.company.BackEnd;
+
+import com.company.Enums.Country;
+import com.company.Enums.League;
+import com.company.Service.PlayerNameAlreadyTakenException;
 
 import java.util.ArrayList;
 

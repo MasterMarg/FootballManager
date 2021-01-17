@@ -1,4 +1,8 @@
-package com.company;
+package com.company.BackEnd;
+
+import com.company.BackEnd.SoccerPlayer;
+import com.company.Enums.Country;
+import com.company.Enums.League;
 
 public interface LeagueManagerInterface {
     void addPlayer(SoccerPlayer player);

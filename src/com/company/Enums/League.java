@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Enums;
 
 public enum League {
     RUS_PREM_LEAGUE("Российская премьер-лига"),
