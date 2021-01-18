@@ -10,13 +10,13 @@ public class SoccerPlayer implements SoccerPlayerInterface {
     private int points;
 
     public SoccerPlayer() {
-        this.name = generateName();
         this.country = Country.values()[(int) (Math.random() * Country.values().length)];
+        this.name = generateName(this.country);
         this.league = League.values()[(int) (Math.random() * League.values().length)];
         this.points = (int) (Math.random() * 40) + 60;
     }
 
-    private String generateName() {
+    private String generateName(Country country) {
         String base = "abcdefghijklmnopqrstuvwxyz";
         StringBuilder name = new StringBuilder();
         int size = (int) (Math.random() * 6 + 5);
@@ -24,6 +24,9 @@ public class SoccerPlayer implements SoccerPlayerInterface {
             if (index==1) name = new StringBuilder(name.toString().toUpperCase());
             name.append(base.toCharArray()[(int) (Math.random() * base.length())]);
         }
+        if(country==Country.POLAND) name.replace(name.length()-2,name.length(),"ic");
+        if(country==Country.RUSSIA) name.replace(name.length()-2, name.length(), "ov");
+        if(country==Country.UKRAINE) name.replace(name.length()-2, name.length(), "ko");
         return name.toString();
     }
 
@@ -48,6 +51,6 @@ public class SoccerPlayer implements SoccerPlayerInterface {
     }
 
     public void renamePlayer() {
-        this.name = generateName();
+        this.name = generateName(this.country);
     }
 }
