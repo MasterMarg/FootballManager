@@ -6,7 +6,7 @@ public class Painter {
         ANSI_BOLD_RED("\u001B[31;1m"),
         ANSI_BOLD_BLUE("\u001B[34;1m");
 
-        public final String color;
+        private final String color;
 
         Paint(String color){
             this.color = color;
