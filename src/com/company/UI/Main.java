@@ -14,6 +14,7 @@ public class Main {
         LeagueManager leagueManager = Service.createLeagueManager();
         getPrintedByLeague(leagueManager);
         getPrintedByCounty(leagueManager);
+        System.out.println("Общее количество игроков: "+leagueManager.getAllPlayers().length);
     }
 
     public static void getPrintedByLeague(LeagueManager leagueManager) {
